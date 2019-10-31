@@ -1,0 +1,9 @@
+ClientInput:
+  type: input-object
+  config:
+    fields:
+      fullName: {type: "String!"}
+      email: {type: "String!"}
+      login: {type: "String!"}
+      enabled: {type: "Boolean!"}
+      deleted: {type: "Boolean!"}

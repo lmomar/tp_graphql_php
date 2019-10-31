@@ -1,0 +1,6 @@
+OrderInput:
+  type: input-object
+  config:
+    fields:
+      price: {type: "String!"}
+      client: {type: "Int!"}

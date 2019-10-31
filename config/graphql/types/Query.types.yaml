@@ -1,0 +1,34 @@
+Query:
+  type: object
+  config:
+    description: "test desc"
+    fields:
+      Client:
+        type: Client
+        args:
+          id: {type: "Int!"}
+        resolve: "@=resolver('Client', [args['id']])"
+      Clients:
+        type: "[Client]"
+        args:
+          id: {type: "Int"}
+          fullName: {type: "String"}
+          email: {type: "String"}
+          login: {type: "String"}
+          enabled: {type: "Boolean"}
+          deleted: {type: "Boolean"}
+        resolve: "@=resolver('Clients', [args])"
+      Order:
+        type: "Order"
+        args:
+          id: {type: Int}
+        resolve: "@=resolver('Order', [args['id']])"
+      Orders:
+        type: "[Order]"
+        args:
+          id: {type: "Int"}
+          client: {type: "Int"}
+          price: {type: "Decimal"}
+          createdAt: {type: "Date"}
+        resolve: "@=resolver('Orders', [args])"
+

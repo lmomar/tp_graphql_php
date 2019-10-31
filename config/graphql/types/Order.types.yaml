@@ -1,0 +1,8 @@
+Order:
+  type: object
+  config:
+    fields:
+      id: {type: Int}
+      price: {type: Decimal}
+      client: {type: Client}
+      created_at: {type: String}

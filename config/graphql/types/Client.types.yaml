@@ -1,0 +1,13 @@
+Client:
+  type: object
+  config:
+    fields:
+      id: {type: Int!}
+      fullName: {type: String!}
+      email: {type: String!}
+      login: {type: String!}
+      enabled: {type: Boolean!}
+      deleted: {type: Boolean}
+      created_at: {type: String!}
+      deleted_at: {type: String}
+      orderCount: {type: Int}

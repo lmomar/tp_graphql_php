@@ -1,0 +1,30 @@
+Mutation:
+  type: object
+  config:
+    fields:
+      client_new:
+        type: "Client!"
+        args:
+          client:
+            type: "ClientInput!"
+        resolve: "@=mutation('newClient',[args['client']])"
+        description: "Add new client"
+      client_update:
+        type: "Client!"
+        args:
+          client: { type: "ClientInput!"}
+          id: { type: 'ID!'}
+        resolve: "@=mutation('client_update',[args])"
+        description: "Update client"
+      client_delete:
+        type: 'ID!'
+        resolve: "@=mutation('client_delete',[args['id']])"
+        args:
+          id: {type: Int!}
+      order_new:
+        type: "Order!"
+        args:
+          order:
+            type: 'OrderInput!'
+        resolve: "@=mutation('newOrder', [args['order']])"
+        description: "Add new order"
